@@ -21,20 +21,27 @@ mdc: true
 Tech Radar 2023
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Here we go... first tech radar
 -->
 ---
-
+class: text-center
+---
 
 # What is it?
+Definitions
+<v-clicks>
 
-- OIDC OpenID Connect
-- Use this to authenticate actions for your pipeline services instead of long lived 'SUPER' tokens
+ OIDC OpenID Connect
+
+ Use this to authenticate actions for your pipeline services instead of long lived 'SUPER' tokens
+
+</v-clicks>
 
 
 
 <!--
 CI and CD are important as a means to deliver incremental changes to improve learning and feedback and deliver value.
+
 These pipelines often use elevated privileges (instead of people) in order to do automated steps.
 They suggest using OpenID Connect instead of long lived high privilege token.
 
@@ -71,7 +78,9 @@ Security
  
 
 <!--
-Security is everyone’s concern. If the accounts used for high level privileged actions are compromised they are not as easy to replace. It also means that the code that makes up the pipeline is now a liability as it can be changed with anyone with access to the repo… but may do extra or destructive actions.
+Security is everyone’s concern. If the accounts used for high level privileged actions are compromised they are not as easy to replace.
+
+It also means that the code that makes up the pipeline is now a liability as it can be changed with anyone with access to the repo… but may do extra or destructive actions.
 
 -->
 ---
@@ -92,8 +101,8 @@ class: text-center
  
 
 <!--
-You can always segment off your build pipeline to a dedicated build process maintained by another team so that those who use the build are not the ones maintaining the build capability. This can create another handoff and could be a bottleneck to changes.
-
+You can always segment off your build pipeline to a dedicated build process maintained by another team so that those who use the build are not the ones maintaining the build capability.
+This can create another handoff and could be a bottleneck to changes.
 -->
 --- 
 layout: center
@@ -101,9 +110,14 @@ class: text-center
 ---
 
 # Risks, pitfalls, downsides, and anti-patterns?
+What could go wrong?
+<v-clicks>
 
- Permissions 'dungeon crawl' to get setup
- 
+Permissions 'dungeon crawl' to get setup
+
+More resources to setup in the target hosted environment?
+
+</v-clicks>
 
 <!--
 In the security/usability graph it is much easier to give the ‘trusted” build system a high credential account in order to do whatever it needs to do for build, provisioning, deployment, etc. There could be a permissions dungeon crawl where each new step comes up to a wall where you have to figure out which permission to create or add in order to complete all the steps.
