@@ -113,9 +113,11 @@ class: text-center
 What could go wrong?
 <v-clicks>
 
-Permissions 'dungeon crawl' to get setup
+Permissions 'dungeon crawl' to get setup on an unsupported platform
 
 More resources to setup in the target hosted environment?
+
+[Github Azure Docs](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure#adding-the-federated-credentials-to-azure)
 
 </v-clicks>
 
